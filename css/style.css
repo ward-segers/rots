@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 *{
     padding: 0;
     margin: 0;
@@ -35,21 +36,40 @@ nav li{
 nav .active a, nav a:hover{
     color: #f78f1e;
 }
+
 section.hero{
     background-image: url(../src/hero.jpg);
+}
+
+section.quote{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 10rem;
     display: grid;
     align-items: center;
+    color: white;
+    text-align: center;
 }
 .hero-quote{
-    
     justify-self: center;
     padding: 1rem 4rem;
-    text-align: center;
     width: 75%;
-    color: white;
     background-color: rgba(0, 0, 0, .5);
+}
+section.focus{
+     background-image: url(../src/quote-hero.jpg);
+}
+.focus-quote{
+    justify-self: center;
+    padding: 10rem 4rem;
+    width: 75%;
+}
+.focus-quote h2{
+    margin: 4rem 0
+}
+.focus-quote cite:first-of-type{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
 }
