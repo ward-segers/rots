@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Open sans", Arial, Helvetica, sans-serif;
+}
+h2{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+header{
+    text-align: center;
+}
+header img:first-of-type{
+    margin: 2rem 0;
+}
+nav{
+    width: 100%;
+    border-top: 1px solid grey;
+    padding: 1rem 0;
+}
+nav a{
+    text-decoration: none;
+    font-weight: 700;
+    color: gray;
+}
+nav li{
+    display: inline;
+    padding: 1rem 3rem;
+    letter-spacing: .2rem;
+    font-size: 13px;
+}
+nav .active a, nav a:hover{
+    color: #f78f1e;
+}
+
+section.hero{
+    background-image: url(../src/hero.jpg);
+}
+
+section.quote{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 10rem;
+    display: grid;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero-quote{
+    justify-self: center;
+    padding: 1rem 4rem;
+    width: 75%;
+    background-color: rgba(0, 0, 0, .5);
+}
+section.focus{
+     background-image: url(../src/quote-hero.jpg);
+}
+.focus-quote{
+    justify-self: center;
+    padding: 10rem 4rem;
+    width: 75%;
+}
+.focus-quote h2{
+    margin: 4rem 0
+}
+.focus-quote cite:first-of-type{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+}
