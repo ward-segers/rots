@@ -1,0 +1,28 @@
+#construction-banner {
+  background-color: #f78f1e;
+  color: white;
+  text-align: center;
+}
+a {
+  color: white;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: white;
+}
+a:hover {
+  color: black;
+  text-decoration-color: black;
+}
+#close-banner {
+  background-color: #f78f1e;
+  color: white;
+  padding-left: 1rem;
+  border: none;
+  cursor: pointer;
+}
+#close-banner:hover {
+  color: black;
+  text-decoration-color: black;
+}

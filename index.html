@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Je huis op de rots bouwen - Christelijke huwelijksvorming</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/construction.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
@@ -15,8 +16,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/png" href="src/favicon.png" />
   </head>
   <body>
+    <div id="construction-banner">
+      Deze website is nog in opbouw. We werken hard om alle informatie zo snel
+      mogelijk beschikbaar te maken. De data van de vormingsavonden voor
+      2025-2026 zijn reeds beschikbaar neem gerust een kijkje
+      <a href="praktisch.html">hier</a>
+      <button id="close-banner">
+        <i class="fa-regular fa-circle-xmark"></i>
+      </button>
+    </div>
     <header>
       <div class="hero" id="hero-header">
         <a href="index.html"
@@ -30,7 +41,7 @@
       <nav>
         <ul>
           <li>
-            <a href="#">Praktisch</a>
+            <a href="praktisch.html">Praktisch</a>
           </li>
           <li>
             <a href="#">Getuigenissen</a>
@@ -48,7 +59,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="index">
       <section>
         <p>
           Wij zijn Jef &amp; Geertrui Segers, sinds 1991 gelukkig getrouwd.
@@ -97,5 +108,6 @@
         >
       </p>
     </footer>
+    <script src="construction.js"></script>
   </body>
 </html>

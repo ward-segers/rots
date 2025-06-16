@@ -9,6 +9,13 @@
   line-height: 2rem;
 }
 
+strong {
+  font-weight: bold;
+}
+.hidden {
+  display: none !important;
+}
+
 header {
   background-image: url("../src/hero-index-edited.jpg");
   background-size: cover;
@@ -60,7 +67,8 @@ header a {
   font-size: 0.7rem;
   text-decoration: none;
 }
-header a:hover {
+header a:hover,
+.nav-active {
   text-decoration: underline;
   color: #f78f1e;
 }
@@ -70,7 +78,7 @@ main section:first-of-type {
   width: 80%;
   max-width: 1600px;
 }
-p {
+#index p {
   margin: 2rem 0;
 }
 p a {
@@ -178,4 +186,25 @@ footer a {
 }
 footer a i {
   margin-right: 0.5rem;
+}
+#praktisch h2 {
+  padding: 2rem 0;
+}
+.praktisch-themas,
+.praktisch-aanpak {
+  list-style: none;
+}
+.praktisch-themas li::before {
+  content: "✔️";
+  padding-right: 0.5rem;
+}
+.praktisch-aanpak li,
+.praktisch-datums li {
+  list-style-type: "-";
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+#map {
+  width: 100%;
+  min-height: 300px;
 }
