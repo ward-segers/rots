@@ -15,23 +15,21 @@ async function getLocation() {
 
 async function init() {
   const map = new maplibregl.Map({
-    // style: "/styles/dark.json",
     style: "https://tiles.openfreemap.org/styles/liberty",
-    center: middleOfUSA,
     zoom: 2,
     container: "map",
   });
-
   const location = await getLocation();
   if (location !== middleOfUSA) {
     map.flyTo({ center: location, zoom: 10 });
-
+    
     new maplibregl.Popup({
       closeOnClick: false,
+      focusAfterOpen: false
     })
-      .setLngLat(location)
-      .setHTML("<h3>\"Je huis op de rots bouwen\"</h3>")
-      .addTo(map);
+    .setLngLat(location)
+    .setHTML("<h3>\"Je huis op de rots bouwen\"</h3>")
+    .addTo(map);
   }
 }
 
