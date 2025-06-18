@@ -16,6 +16,23 @@ strong {
   display: none !important;
 }
 
+.error-message {
+  color: #d32f2f;
+  font-size: 0.95em;
+  margin-top: 0.2em;
+}
+.error-message a {
+  color: black;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+}
+.error-message a:hover {
+  color: #f78f1e;
+  text-decoration-color: #f78f1e;
+}
+
 header {
   background-image: url("../src/hero-index-edited.jpg");
   background-size: cover;
@@ -32,15 +49,17 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 #hero-header {
   display: grid;
   grid-template-columns: 1fr 80%;
   justify-items: center;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 #hero-header img {
   width: 50%;
@@ -110,18 +129,19 @@ p a:hover {
   margin: 2rem auto;
   width: 80%;
   max-width: 200px;
+}
+.call-to-action,
+#contact-form button {
   border-radius: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
-.call-to-action:hover {
+.call-to-action:hover,
+#contact-form button:hover {
   background-color: #f78f1e;
   color: black;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 4px;
 }
-.call-to-action:active {
+.call-to-action:active,
+#contact-form button:active {
   box-shadow: inset 0 0 5px white;
 }
 
@@ -240,7 +260,49 @@ footer a i {
 .menu-toggle:checked + .hamburger .fa-xmark {
   display: inline;
 }
-
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact-form button {
+  background-color: #1d8842;
+  color: white;
+  border: none;
+  min-width: 100px;
+  max-width: 200px;
+  padding: 0.5rem 1rem;
+  align-self: end;
+  cursor: pointer;
+}
+#waarom section:first-of-type {
+  text-align: center;
+  max-width: 800px;
+}
+#waarom section:first-of-type h2 {
+  margin-bottom: 2rem;
+}
+#waarom section:first-of-type ul li {
+  list-style: none;
+}
+#waarom section:first-of-type ul li::after {
+  content: "***";
+  display: block;
+  margin: 1rem auto;
+  width: fit-content;
+  color: #f78f1e;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  background: none;
+  height: auto;
+}
+#waarom section:first-of-type ul li:last-of-type::after {
+  content: none;
+}
 @media screen and (max-width: 768px) {
   header {
     min-height: 15rem;

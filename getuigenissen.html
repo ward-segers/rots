@@ -16,6 +16,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="src/favicon.png" />
   </head>
   <body>
@@ -28,6 +32,11 @@
         <i class="fa-regular fa-circle-xmark"></i>
       </button>
     </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-xmark"></i>
+    </label>
     <header>
       <div class="hero" id="hero-header">
         <a href="index.html"
@@ -38,18 +47,13 @@
           huwelijk overwegen
         </h2>
       </div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
-      </label>
       <nav>
         <ul>
           <li>
             <a href="praktisch.html">Praktisch</a>
           </li>
           <li>
-            <a href="getuigenissen.html">Getuigenissen</a>
+            <a href="getuigenissen.html" class="nav-active">Getuigenissen</a>
           </li>
           <li>
             <a href="contact.html">Contact</a>
@@ -64,35 +68,9 @@
       </nav>
     </header>
 
-    <main id="index">
-      <section>
-        <p>
-          Wij zijn Jef &amp; Geertrui Segers, sinds 1991 gelukkig getrouwd.
-          Zonder veel voorbereiding begonnen we destijds aan ons
-          huwelijksavontuur. Het was een sprong, een risico. Door de jaren heen
-          zijn we blijven groeien – als man en vrouw, als echtpaar, als mensen.
-          God zij dank kruisten vele goede vrienden ons pad; ze bemoedigden ons,
-          daagden ons uit en inspireerden ons.
-        </p>
-        <p>
-          Steunend op de meer dan 20 jaar ervaring van onze collega's van
-          <a href="https://www.batirsamaisonsurleroc.be"
-            >"Bâtir sa maison sur le roc"</a
-          >
-          en vanuit onze eigen studie, ondervinding en beleving, begeleiden we
-          koppels om zo goed als mogelijk voorbereid de stap te zetten naar hun
-          huwelijk. Met "Rots" gaan we geen
-          <a href="waarom.html">onderwerpen</a> uit de weg, zijn er geen taboes,
-          wordt niemand geoordeeld en worden blijvend kansen gegeven... We
-          geloven dat openheid, luisteren en spreken de mooiste weg is naar de
-          zelfgevende liefde. We willen meehelpen de schoonheid te
-          (her)ontdekken van een levenslang engagement. Is dit een gemakkelijke
-          opgave? Natuurlijk niet! Juist dáárom hebben we een sacrament nodig om
-          blijvend te putten uit die onuitputtelijke genadebron van de Rots
-          waarop we onze relatie bouwen.
-        </p>
-        <a href="waarom.html" class="call-to-action">Waarom "Rots"?</a>
-      </section>
+    <main id="waarom">
+      <!-- TODO: Add the why section content -->
+
       <section>
         <div class="hero" id="hero-home">
           <blockquote>
@@ -113,6 +91,9 @@
         >
       </p>
     </footer>
+
+    <script type="module" src="app.js"></script>
     <script src="construction.js"></script>
+    <script src="hamburger.js"></script>
   </body>
 </html>
