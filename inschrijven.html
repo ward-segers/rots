@@ -16,6 +16,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="src/favicon.png" />
   </head>
   <body>
@@ -28,6 +32,7 @@
         <i class="fa-regular fa-circle-xmark"></i>
       </button>
     </div>
+
     <header>
       <div class="hero" id="hero-header">
         <a href="index.html"
@@ -43,7 +48,7 @@
       <nav>
         <ul>
           <li>
-            <a href="praktisch.html">Praktisch</a>
+            <a href="praktisch.html" class="nav-active">Praktisch</a>
           </li>
           <li>
             <a href="getuigenissen.html">Getuigenissen</a>
@@ -61,34 +66,73 @@
       </nav>
     </header>
 
-    <main id="index">
+    <main id="praktisch">
       <section>
-        <p>
-          Wij zijn Jef &amp; Geertrui Segers, sinds 1991 gelukkig getrouwd.
-          Zonder veel voorbereiding begonnen we destijds aan ons
-          huwelijksavontuur. Het was een sprong, een risico. Door de jaren heen
-          zijn we blijven groeien – als man en vrouw, als echtpaar, als mensen.
-          God zij dank kruisten vele goede vrienden ons pad; ze bemoedigden ons,
-          daagden ons uit en inspireerden ons.
-        </p>
-        <p>
-          Steunend op de meer dan 20 jaar ervaring van onze collega's van
-          <a href="https://www.batirsamaisonsurleroc.be"
-            >"Bâtir sa maison sur le roc"</a
-          >
-          en vanuit onze eigen studie, ondervinding en beleving, begeleiden we
-          koppels om zo goed als mogelijk voorbereid de stap te zetten naar hun
-          huwelijk. Met "Rots" gaan we geen
-          <a href="praktisch.html#themas">onderwerpen</a> uit de weg, zijn er
-          geen taboes, wordt niemand geoordeeld en worden blijvend kansen
-          gegeven... We geloven dat openheid, luisteren en spreken de mooiste
-          weg is naar de zelfgevende liefde. We willen meehelpen de schoonheid
-          te (her)ontdekken van een levenslang engagement. Is dit een
-          gemakkelijke opgave? Natuurlijk niet! Juist dáárom hebben we een
-          sacrament nodig om blijvend te putten uit die onuitputtelijke
-          genadebron van de Rots waarop we onze relatie bouwen.
-        </p>
-        <a href="waarom.html" class="call-to-action">Waarom "Rots"?</a>
+        <h2>Willen jullie je inschrijven?</h2>
+        <p>Aarzel niet om nog extra vragen toe te voegen.</p>
+
+        <form
+          id="inschrijf-formulier"
+          action="#"
+          method="POST"
+          style="display: flex; gap: 2rem; flex-wrap: wrap"
+        >
+          <div class="form-split-container">
+            <fieldset>
+              <legend>Haar gegevens</legend>
+              <label for="name-her">Naam:</label>
+              <input type="text" id="name-her" name="name-her" required />
+
+              <label for="email-her">E-mail:</label>
+              <input type="email" id="email-her" name="email-her" required />
+
+              <label for="adres-her">Adres:</label>
+              <input type="text" id="adres-her" name="adres-her" required />
+
+              <label for="phone-her">Telefoon:</label>
+              <input type="text" id="phone-her" name="phone-her" required />
+            </fieldset>
+            <fieldset>
+              <legend>Zijn gegevens</legend>
+              <label for="name-him">Naam:</label>
+              <input type="text" id="name-him" name="name-him" required />
+
+              <label for="email-him">E-mail:</label>
+              <input type="email" id="email-him" name="email-him" required />
+
+              <label for="adres-him">Adres:</label>
+              <input type="text" id="adres-him" name="adres-him" required />
+
+              <label for="phone-him">Telefoon:</label>
+              <input type="text" id="phone-him" name="phone-him" required />
+            </fieldset>
+          </div>
+
+          <div class="contact-form-row">
+            <label for="relatiestatus">Relatie-situatie</label>
+            <select id="relatiestatus" name="relatiestatus" required>
+              <option value="" disabled selected>
+                Selecteer jullie relatie-situatie
+              </option>
+              <option value="in een relatie">In een relatie</option>
+              <option value="verloofd">Verloofd</option>
+              <option value="gehuwd">Gehuwd</option>
+            </select>
+          </div>
+
+          <label for="message">Bericht:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <div class="error-message" id="contact-form-error" aria-live="polite">
+            Er wordt momenteel achter de schermen aan het contact formulier
+            gewerkt. Je kan steeds naar dit mail adres sturen:
+            <a href="mailto:geertruisegers@gmail.com"
+              >geertruisegers@gmail.com</a
+            >
+          </div>
+
+          <button type="submit">Verstuur</button>
+        </form>
       </section>
       <section>
         <div class="hero" id="hero-home">
@@ -110,6 +154,9 @@
         >
       </p>
     </footer>
+
+    <script type="module" src="app.js"></script>
     <script src="construction.js"></script>
+    <script src="hamburger.js"></script>
   </body>
 </html>
