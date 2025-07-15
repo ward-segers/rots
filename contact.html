@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Je huis op de rots bouwen - Christelijke huwelijksvorming</title>
+    <title>Vorming rond Relatie en Katholiek Huwelijk</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/construction.css" />
     <style>
@@ -23,15 +23,6 @@
     <link rel="icon" type="image/png" href="src/favicon.png" />
   </head>
   <body>
-    <div id="construction-banner">
-      Onze website wordt volop vernieuwd. We werken hard om alle informatie zo
-      snel mogelijk beschikbaar te maken. De data van de vormingsavonden voor
-      2025-2026 zijn reeds beschikbaar neem gerust een kijkje
-      <a href="praktisch.html#praktisch-datums">hier</a>
-      <button id="close-banner">
-        <i class="fa-regular fa-circle-xmark"></i>
-      </button>
-    </div>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <label for="menu-toggle" class="hamburger" aria-label="Open menu">
       <i class="fa-solid fa-bars"></i>
@@ -81,16 +72,54 @@
           <label for="message">Bericht:</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <div class="error-message" id="contact-form-error" aria-live="polite">
-            Er wordt momenteel achter de schermen aan het contact formulier
-            gewerkt. Je kan steeds naar dit mail adres sturen:
-            <a href="mailto:geertruisegers@gmail.com"
-              >geertruisegers@gmail.com</a
-            >
-          </div>
+          <div
+            class="error-message"
+            id="contact-form-error"
+            aria-live="polite"
+            style="display: none"
+          ></div>
 
           <button type="submit">Verstuur</button>
         </form>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            const errorDiv = document.getElementById("contact-form-error");
+            form.addEventListener("submit", async function (e) {
+              e.preventDefault();
+              errorDiv.style.display = "none";
+              errorDiv.textContent = "";
+              const data = {
+                name: form.name.value,
+                _replyto: form._replyto.value,
+                message: form.message.value,
+              };
+              try {
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(data),
+                });
+                const result = await res.json();
+                if (result.success) {
+                  form.reset();
+                  errorDiv.style.display = "block";
+                  errorDiv.style.color = "#1d8842";
+                  errorDiv.innerHTML =
+                    "Bedankt voor je bericht! We nemen snel contact op.";
+                } else {
+                  throw new Error(result.error || "Onbekende fout");
+                }
+              } catch (err) {
+                errorDiv.style.display = "block";
+                errorDiv.style.color = "#d32f2f";
+                errorDiv.innerHTML =
+                  'Er ging iets mis bij het verzenden. Je kan steeds naar dit mail adres sturen: <a href="mailto:geertruisegers@gmail.com">geertruisegers@gmail.com</a>';
+              }
+            });
+          });
+        </script>
 
         <h2>Liever meteen <a href="inschrijven.html">inschrijven</a>?</h2>
       </section>

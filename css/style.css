@@ -100,6 +100,10 @@ main section:first-of-type {
 #index p {
   margin: 2rem 0;
 }
+#index section p {
+  letter-spacing: 0.04em;
+  word-spacing: 0.15em;
+}
 p a {
   color: black;
   text-decoration: underline;
@@ -164,7 +168,56 @@ h2 a:hover {
   align-items: center;
   justify-content: center;
 }
-blockquote {
+#getuigenissen-hero,
+#praktisch-hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#getuigenissen-hero {
+  background-image: url("../src/getuigenissen.jpg");
+}
+#testimonials section:first-of-type {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #ececee;
+}
+.testimonial img {
+  width: 100%;
+  height: auto;
+}
+.testimonial blockquote {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.testimonial p {
+  padding: 1rem;
+  align-self: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: white;
+}
+.testimonial cite {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #666;
+}
+#praktisch-hero {
+  background-image: url("../src/hero-header.jpg");
+}
+.hero blockquote {
   background: rgba(0, 0, 0, 0.5);
   margin: 2rem 0;
   padding: 2rem 2.5rem 1.5rem 2.5rem;
@@ -175,7 +228,7 @@ blockquote {
   border-radius: 0.7rem 0.7rem 0.7rem 0.2rem;
   position: relative;
 }
-blockquote::before {
+.hero blockquote::before {
   content: "\201C";
   font-size: 3rem;
   color: white;
@@ -184,7 +237,7 @@ blockquote::before {
   top: 0.7rem;
   line-height: 1;
 }
-blockquote::after {
+.hero blockquote::after {
   content: "\201C";
   font-size: 3rem;
   color: white;
@@ -192,7 +245,7 @@ blockquote::after {
   bottom: -0.7rem;
   line-height: 1;
 }
-cite {
+.hero cite {
   display: block;
   margin-top: 1rem;
   color: white;
