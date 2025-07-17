@@ -16,18 +16,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
-      rel="stylesheet"
-    />
     <link rel="icon" type="image/png" href="src/favicon.png" />
   </head>
   <body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
-      <i class="fa-solid fa-bars"></i>
-      <i class="fa-solid fa-xmark"></i>
-    </label>
     <header>
       <div class="hero" id="hero-header">
         <a href="index.html"
@@ -35,6 +26,11 @@
         /></a>
         <h2>Een katholiek huwelijk? Vormingstraject rond liefde en relatie.</h2>
       </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </label>
       <nav>
         <ul>
           <li>
@@ -59,6 +55,7 @@
     <main id="testimonials">
       <section>
         <article class="testimonial">
+          <img src="src/testimonial_lm.png" alt="Testimonial l&m" />
           <blockquote>
             <p>
               De cursus voorzag ons van een sterke theologische basis en heel
@@ -71,17 +68,35 @@
             </p>
             <cite>L&M</cite>
           </blockquote>
-          <img src="src/testimonial_lm.png" alt="Testimonial l&m" />
+        </article>
+        <article class="testimonial">
+          <img src="src/testimonial_chr.jpg" alt="Testimonial Ch. & R" />
+          <blockquote>
+            <p>
+              De cursus heeft ons onderwerpen aangereikt waarvan we nog niet
+              beseft hadden dat daarover gepraat moest/kon worden. De inzichten
+              die we meekregen zullen we gedurende de rest van ons huwelijk als
+              fundament kunnen gebruiken. Het napraten na de sessies met wat
+              lekkernij kon ook steeds interessante onderwerpen naar boven
+              halen. Een prachtig geschenk...
+            </p>
+            <cite>Ch.&R</cite>
+          </blockquote>
+        </article>
+        <article class="testimonial">
+          <img src="src/testimonial_extra.jpg" alt="Testimonial" />
         </article>
       </section>
 
       <section>
         <div class="hero" id="getuigenissen-hero">
           <blockquote>
-            A strong marriage requires two people who choose to love each other
-            even on those days they struggle to like each other
+            If therefore, a marriage is based wholly upon feeling and emotion,
+            then love dies when feeling dies. But when there is a love of the
+            person because of the nobility of character and goodheartedness,
+            then love never ends but increases from day to day.
           </blockquote>
-          <cite>Dave Willis</cite>,
+          <cite>Ven. Fulton Sheen</cite>
         </div>
       </section>
     </main>
