@@ -294,7 +294,8 @@ footer a i {
   padding-right: 0.5rem;
 }
 .praktisch-aanpak li,
-.praktisch-datums li {
+.praktisch-datums li,
+.praktisch-prijs li {
   list-style-type: "-";
   padding-left: 1rem;
   margin-left: 1rem;

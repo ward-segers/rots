@@ -104,7 +104,7 @@ app.post('/api/inschrijven', async (req, res) => {
     await transporter.sendMail({
       from: `info@jehuisopderotsbouwen.be <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_RECEIVER || process.env.SMTP_USER,
-      subject: 'Nieuwe inschrijving via inschrijf-formulier',
+      subject: 'Nieuwe inschrijving via inschrijvingsformulier',
       replyTo: emailHer,
       html,
     });
